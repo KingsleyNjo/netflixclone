@@ -1,0 +1,22 @@
+.watch {
+    width: 100vw;
+    height: 100vh;
+  
+    .back {
+      display: flex;
+      align-items: center;
+      position: absolute;  //positioning the back button icon well
+      top: 10px;
+      left: 10px;
+      color: white;
+      cursor: pointer;
+      z-index: 2;
+    }
+  
+    .video {
+      width: 100%;  //since width above is 100vw, then to make the video whole length we do 100%
+      height: 100%;  //since height above is 100vh, then to make the video whole height of laptop screen we do 100%
+      object-fit: cover;
+    }
+  }
+  

@@ -1,0 +1,83 @@
+.listItem {
+    width: 225px;  //width of the listItem container is 225px initially
+    height: 120px;
+    background-color: var(--main-color);
+    margin-right: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;  //icons color is white
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    //arranging the video
+    video {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  
+    &:hover {
+      width: 325px;  //if you hover the listItem ciontainer then width will become bigger
+      height: 300px;
+      position: absolute; //when we hover i want to arrange the top side well so i put -150px, so deal with hover for left and right, we create a useState hooks
+      top: -150px;
+      -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07);
+      box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07);   //so created a box-shadow when we hover so i can see the difference between it and background
+      border-radius: 5px;  //give border radius for the container when you hover
+  
+      img {
+        height: 140px;  //we initially created height of img to be 100%, now if u hover over the img it is 140pc
+      }
+     //considering thr itemInfo
+      .itemInfo {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+  
+        .icons {
+          display: flex;
+          margin-bottom: 10px;
+  
+          .icon {
+            border: 2px solid white;  //created a border in each icon
+            padding: 5px;  //separate the icon
+            border-radius: 50%;  //make thr border radiuc(which makes it a circle
+            margin-right: 10px;
+            font-size: 16px;
+          }
+        }
+        .itemInfoTop {
+          display: flex;
+          align-items: center; //center the item information(movie information)
+          margin-bottom: 10px;
+          font-size: 14px;
+          font-weight: 600;
+          color: gray;
+          
+          //give some style for the limit
+          .limit {
+            border: 1px solid gray;
+            padding: 1px 3px;
+            margin: 0 10px;
+          }
+        }
+  
+        .desc {
+          font-size: 13px;
+          margin-bottom: 10px;
+        }
+  
+        .genre {
+          font-size: 14px;
+          color: lightgray;
+        }
+      }
+    }
+  }
+  
